@@ -1,0 +1,145 @@
+% Shared facts and layout for both public English CVs. Updated 21 October 2026.
+% Compile either named entry point from this directory with pdfLaTeX.
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scaled=0.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[a4paper,left=17mm,right=17mm,top=16mm,bottom=16mm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\definecolor{accent}{HTML}{183E56}
+\definecolor{muted}{HTML}{45535D}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent,
+  pdfauthor={Bruno Henrique Nunes},
+  pdftitle={Bruno Henrique Nunes - English CV},
+  pdfsubject={Applied AI, machine learning, computer vision and data science}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3.5pt}
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{-4pt}\color{accent}\titlerule]
+\titlespacing*{\section}{0pt}{11pt}{6pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2.5pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+\newcommand{\role}[3]{\textbf{#1 --- #2}\hfill {\small #3}\par}
+\newcommand{\smallrole}[3]{\textbf{#1 --- #2}\hfill {\small #3}\par}
+\newcommand{\currentwork}{%
+\section{Professional Experience}
+\role{Application Developer}{IBM}{Aug 2026 -- Present}
+\begin{itemize}
+  \item Build multi-agent harnesses and applied-AI application components; explore datasets and train machine learning models for data-science use cases.
+  \item Architected and developed a production-deployed SDLC Run Insights Chatbot in Python/FastAPI, retrieving run evidence and platform knowledge and using IBM watsonx LLMs for grounded responses.
+  \item Implemented prompt-injection and output-safety guardrails, observability, automated tests and production deployment support for the chatbot.
+\end{itemize}}
+\newcommand{\researchwork}{%
+\section{Selected Research and Projects}
+\textbf{Deep Learning for Prostate Histopathology}\hfill {\small Feb 2024 -- Sep 2026}\par
+Master's research, University of Campinas (UNICAMP)\par
+\begin{itemize}
+  \item Developed a research pipeline for binary segmentation of prostate cancer in histopathological images, using CNN/Transformer-based modeling and PyTorch.
+  \item Implemented data preparation and quality control, patient-level data partitioning, model training, ensemble optimization and final evaluation.
+  \item Preserved configurations, data provenance and experimental outputs to support reproducibility. The REDU deposit contains generated research artifacts; original DIAGSET images are not redistributed.
+\end{itemize}
+{\small \href{https://github.com/bhnunes/Master_Coding}{Code: github.com/bhnunes/Master\_Coding}\quad\textbar\quad
+\href{https://doi.org/10.25824/redu/EDPCF2}{Artifacts: doi.org/10.25824/redu/EDPCF2}}\par
+\vspace{3pt}
+\textbf{GEODITE --- Equivariant Interatomic Potentials}\par
+Contributed to model implementation, training and evaluation for an equivariant message-passing model for interatomic potentials.\par
+Co-author, \emph{Equivariant Interatomic Potentials without Tensor Products} (arXiv preprint, January 2026).\par
+{\small \href{https://arxiv.org/abs/2601.15492}{arxiv.org/abs/2601.15492}}\par}
+\newcommand{\teachingwork}{%
+\section{Teaching Experience}
+\role{Teaching Assistant}{UNICAMP}{Jul 2024 -- Dec 2025}
+Supported more than 200 undergraduate students in database management and object-oriented programming; led problem-solving sessions in SQL, relational algebra and OOP and supported assessment. Internship appointment.\par}
+
+\begin{document}
+\fontsize{10.5}{13}\selectfont
+{\fontsize{24}{27}\selectfont\bfseries\color{accent} Bruno Henrique Nunes}\par
+\ifdatascience
+  {\large\bfseries Data Scientist \textbar\ Machine Learning \& Computer Vision}\par
+\else
+  {\large\bfseries Applied AI / Machine Learning Engineer}\par
+\fi
+{\small Brazil \textbar\ Open to remote opportunities hiring from Brazil}\par
+{\small \href{mailto:bruno.nunes.1987@gmail.com}{bruno.nunes.1987@gmail.com}\quad\textbar\quad
+\href{https://github.com/bhnunes}{github.com/bhnunes}}\par
+{\small \href{https://www.linkedin.com/in/brunohenriquenunes/}{linkedin.com/in/brunohenriquenunes}}\par
+
+\section{Professional Summary}
+\ifdatascience
+Data scientist and software engineer with a completed MSc in Artificial Intelligence from UNICAMP. Combine computer vision research, reproducible machine learning and Python/SQL data workflows with applied AI development at IBM. Experience spans dataset preparation, model training and evaluation, enterprise analytics, and international software delivery.
+\else
+AI and software engineer with a completed MSc in Artificial Intelligence from UNICAMP. Build multi-agent applications, chatbots and RAG workflows at IBM, supported by research in computer vision and reproducible machine learning. Bring enterprise experience in Python/SQL workflows, API integration, testing and international delivery.
+\fi
+
+\section{Technical Skills}
+\ifdatascience
+\textbf{Data and ML:} Python, SQL, PyTorch, computer vision, deep learning, segmentation.\par
+\textbf{Research workflows:} Data preparation, quality control, patient-level splits, model evaluation, ensemble inference, provenance and reproducibility.\par
+\textbf{Applied AI:} Multi-agent workflows, chatbots, retrieval-augmented generation, IBM watsonx.\par
+\else
+\textbf{Applied AI and ML:} Python, PyTorch, multi-agent workflows, chatbots, RAG, IBM watsonx.\par
+\textbf{Computer vision:} Deep learning, CNNs, Transformers, semantic segmentation, model evaluation, ensemble inference and reproducible research.\par
+\textbf{Data:} SQL, data preparation, quality control, patient-level splits and provenance.\par
+\fi
+\textbf{Software delivery:} FastAPI, REST APIs, AWS Lambda, AWS SES, Git, Azure DevOps CI/CD.\par
+
+\ifdatascience
+  \researchwork
+  \currentwork
+\else
+  \currentwork
+  \researchwork
+\fi
+\teachingwork
+
+\newpage
+\section{Selected Earlier Experience}
+\smallrole{Software Developer}{PAteam (freelance)}{Jan 2024 -- May 2024}
+Developed Python automation and data-ingestion workflows, including AWS Lambda-hosted extraction, REST API integration and AWS SES messaging.\par
+\vspace{4pt}
+\smallrole{Software Developer}{Expleo Group (contract)}{May 2022 -- Aug 2023}
+\begin{itemize}
+  \item Built automation and API integrations for a legacy-to-Salesforce data migration using Python, Robocorp, Salesforce REST APIs and SQL Server.
+  \item Clarified requirements with client and delivery teams; documented workflows and supported deployment through Azure DevOps CI/CD, migration monitoring and issue resolution.
+\end{itemize}
+\vspace{2pt}
+\smallrole{Senior RPA Developer}{Nestl\'e}{Feb 2022 -- Aug 2023}
+\begin{itemize}
+  \item Designed and implemented 13 enterprise automations using Python, Blue Prism, PowerShell, SQL and Automation Anywhere; worked with stakeholders in and outside Brazil.
+  \item Supported and reviewed code across more than 10 projects, mentored developers, and managed change requests for release and approval of more than 50 robots.
+\end{itemize}
+\vspace{2pt}
+\smallrole{Senior RPA Developer}{Deloitte}{Nov 2021 -- Feb 2022}
+Translated stakeholder requirements into Python, Node.js and UiPath automation for a healthcare IoT integration project; presented solutions to clients and suppliers.\par
+\vspace{4pt}
+\textbf{IBM --- Earlier roles}\par
+{\small RPA Developer: Oct 2019 -- Nov 2021\quad\textbar\quad Software Developer: Oct 2018 -- Oct 2019}\par
+{\small IT Analyst: Jan 2017 -- Oct 2018\quad\textbar\quad Support Specialist: Jan 2012 -- Oct 2014}\par
+\begin{itemize}
+  \item Delivered global and regional automations with Python/Selenium, APIs, SAP, Db2, Cloudant and Blue Prism; built ad hoc tools with Python, VBA and JavaScript.
+  \item As IT Analyst, created invoice analytics with VBA and Power Query, consolidating more than 20,000 records into over 10 validation KPIs; reported processing time fell from over three hours to about six minutes.
+  \item As Support Specialist, provided English-language support to US and Canadian clients and used SQL for compliance checks and billing-adjustment reporting.
+\end{itemize}
+
+\section{Education}
+\textbf{MSc in Artificial Intelligence --- University of Campinas (UNICAMP)}\hfill {\small 2024 -- 2026}\par
+Completed September 2026; research in deep learning for prostate histopathology.\par
+\textbf{MBA in Computer Software Engineering --- FIA Business School}\hfill {\small 2022 -- 2023}\par
+\textbf{Bachelor's in Engineering Physics / Applied Physics --- University of S\~ao Paulo}\hfill {\small 2006 -- 2010}\par
+
+\section{Selected Certifications}
+\href{https://www.credly.com/badges/da6596b6-50b9-436a-b5b5-8d59cb9c4b57/linked_in_profile}{AWS Certified Generative AI Developer -- Professional}\hfill {\small Oct 2026}\par
+\href{https://www.credly.com/badges/c6c30196-7851-4b13-86dc-8dc39bcc88af/linked_in_profile}{AWS Certified Machine Learning Engineer -- Associate}\hfill {\small Jul 2026}\par
+\href{https://www.credly.com/badges/b6f2cb3b-6864-458f-b23b-9c7338162201/linked_in_profile}{AWS Certified Developer -- Associate}\hfill {\small Oct 2025}\par
+\href{https://www.credly.com/badges/49d75390-52d0-4dc5-a5bb-a3f803ab0c86/linked_in_profile}{AWS Certified Solutions Architect -- Associate}\hfill {\small Apr 2025}\par
+
+\section{Languages}
+\textbf{Portuguese:} Native.\quad\textbf{English:} Full professional proficiency.\par
+TOEIC Listening and Reading: 890 (September 2025).\par
+\textbf{Spanish and Italian:} Elementary proficiency.\par
+\end{document}
