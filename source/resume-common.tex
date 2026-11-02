@@ -1,4 +1,4 @@
-% Shared facts and layout for both public English CVs. Updated 21 October 2026.
+% Shared facts and layout for both public English CVs. Updated 2 November 2026.
 % Compile either named entry point from this directory with pdfLaTeX.
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -18,23 +18,38 @@
   pdfauthor={Bruno Henrique Nunes},
   pdftitle={Bruno Henrique Nunes - English CV},
   pdfsubject={Applied AI, machine learning, computer vision and data science}}
+\ifdatascience
+\hypersetup{pdftitle={Bruno Henrique Nunes - Data Scientist CV}}
+\else
+\hypersetup{pdftitle={Bruno Henrique Nunes - Applied AI and Machine Learning Engineer CV}}
+\fi
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{3.5pt}
+\setlength{\parskip}{2pt}
 \setlength{\emergencystretch}{2em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
 \titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{-4pt}\color{accent}\titlerule]
-\titlespacing*{\section}{0pt}{11pt}{6pt}
-\setlist[itemize]{leftmargin=1.2em,itemsep=2.5pt,topsep=3pt,parsep=0pt,partopsep=0pt}
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=2pt,topsep=2.5pt,parsep=0pt,partopsep=0pt}
 \newcommand{\role}[3]{\textbf{#1 --- #2}\hfill {\small #3}\par}
 \newcommand{\smallrole}[3]{\textbf{#1 --- #2}\hfill {\small #3}\par}
 \newcommand{\currentwork}{%
 \section{Professional Experience}
 \role{Application Developer}{IBM}{Aug 2026 -- Present}
+\ifdatascience
 \begin{itemize}
-  \item Build multi-agent harnesses and applied-AI application components; explore datasets and train machine learning models for data-science use cases.
-  \item Architected and developed a production-deployed SDLC Run Insights Chatbot in Python/FastAPI, retrieving run evidence and platform knowledge and using IBM watsonx LLMs for grounded responses.
-  \item Implemented prompt-injection and output-safety guardrails, observability, automated tests and production deployment support for the chatbot.
-\end{itemize}}
+  \item Apply Python, SQL and statistical methods to structured data workflows, with attention to data validation, analytics readiness and reproducible reporting.
+  \item Contribute to AI agent and LLM applications using RAG, NLP and evidence retrieval; build Python/FastAPI services and REST APIs.
+  \item Implement prompt engineering, prompt-injection defenses, output guardrails, automated testing and observability for reliable AI applications.
+\end{itemize}
+\else
+\begin{itemize}
+  \item Build Python-based AI agents and multi-agent workflows for applied AI, software engineering and Data Science use cases.
+  \item Develop retrieval-grounded LLM applications with RAG, NLP, evidence retrieval, prompt engineering and Python/FastAPI REST APIs.
+  \item Implement prompt-injection defenses, output guardrails, automated testing and observability; support application deployment.
+\end{itemize}
+\fi}
 \newcommand{\researchwork}{%
 \section{Selected Research and Projects}
 \textbf{Deep Learning for Prostate Histopathology}\hfill {\small Feb 2024 -- Sep 2026}\par
@@ -55,6 +70,22 @@ Co-author, \emph{Equivariant Interatomic Potentials without Tensor Products} (ar
 \section{Teaching Experience}
 \role{Teaching Assistant}{UNICAMP}{Jul 2024 -- Dec 2025}
 Supported more than 200 undergraduate students in database management and object-oriented programming; led problem-solving sessions in SQL, relational algebra and OOP and supported assessment. Internship appointment.\par}
+\newcommand{\selectedprojects}{%
+\section{Selected 2026 Applied AI and Data Science Projects}
+\ifdatascience
+\begin{itemize}
+  \item \textbf{LLM response quality (Feb--Mar):} Combined lexical metrics, semantic similarity, NLP and text embeddings with model-assisted judgment for ambiguous cases.
+  \item \textbf{Agent efficiency and tooling (May--Jul):} Designed paired analyses using the Wilcoxon signed-rank test, bootstrap confidence intervals and token usage analysis; built Python tooling for multi-agent workflows, automated testing and code-quality checks.
+  \item \textbf{Data Science and analytics (Jul--Oct):} Prototyped RAG-supported, hypothesis-driven analysis and reproducible reporting; applied data quality, NLP semantic search, topic modeling, statistical metric design, Apache Spark and telemetry enrichment with REST APIs, PostgreSQL and Kubernetes.
+\end{itemize}
+\else
+\begin{itemize}
+  \item \textbf{LLM evaluation (Feb--Mar):} Combined lexical and semantic signals, text embeddings and model-assisted judgment to evaluate response quality.
+  \item \textbf{AI agent engineering and evaluation (May--Jul):} Built Python tooling for multi-agent software-engineering workflows with repository-aware guidance and automated tests; designed paired statistical analyses using the Wilcoxon signed-rank test, bootstrap confidence intervals and token usage metrics.
+  \item \textbf{Applied Data Science and NLP (Jul--Oct):} Prototyped RAG-supported analysis, multilingual text classification and semantic search; applied data validation, topic modeling, statistical metric design, Apache Spark and telemetry enrichment with REST APIs, PostgreSQL and Kubernetes.
+\end{itemize}
+\fi
+}
 
 \begin{document}
 \fontsize{10.5}{13}\selectfont
@@ -71,22 +102,22 @@ Supported more than 200 undergraduate students in database management and object
 
 \section{Professional Summary}
 \ifdatascience
-Data scientist and software engineer with a completed MSc in Artificial Intelligence from UNICAMP. Combine computer vision research, reproducible machine learning and Python/SQL data workflows with applied AI development at IBM. Experience spans dataset preparation, model training and evaluation, enterprise analytics, and international software delivery.
+Data Scientist and Applied Machine Learning Engineer with a completed MSc in Artificial Intelligence from UNICAMP. Apply Python, SQL and Apache Spark to statistical analysis, data quality, NLP and reproducible machine learning. Experience includes experiment design, model evaluation, semantic search, topic modeling, computer vision and enterprise analytics.
 \else
-AI and software engineer with a completed MSc in Artificial Intelligence from UNICAMP. Build multi-agent applications, chatbots and RAG workflows at IBM, supported by research in computer vision and reproducible machine learning. Bring enterprise experience in Python/SQL workflows, API integration, testing and international delivery.
+Applied AI and Machine Learning Engineer with a completed MSc in Artificial Intelligence from UNICAMP. Develop AI agents, multi-agent workflows and LLM applications using RAG, NLP and prompt engineering. Combine Python/API engineering, LLM evaluation, automated testing and observability with reproducible deep-learning research and statistical analysis.
 \fi
 
 \section{Technical Skills}
 \ifdatascience
-\textbf{Data and ML:} Python, SQL, PyTorch, computer vision, deep learning, segmentation.\par
-\textbf{Research workflows:} Data preparation, quality control, patient-level splits, model evaluation, ensemble inference, provenance and reproducibility.\par
-\textbf{Applied AI:} Multi-agent workflows, chatbots, retrieval-augmented generation, IBM watsonx.\par
+\textbf{Data Science and analytics:} Python, SQL, Apache Spark, statistical analysis, experiment design, data profiling, data quality, schema validation, metric design.\par
+\textbf{NLP and Applied AI:} Natural Language Processing (NLP), text classification, semantic similarity, text embeddings, vector search, Information Retrieval, semantic search, topic modeling, clustering, RAG, AI agents, LLM evaluation.\par
+\textbf{Machine learning:} PyTorch, computer vision, deep learning, segmentation, model evaluation, ensemble inference, data provenance and reproducibility.\par
 \else
-\textbf{Applied AI and ML:} Python, PyTorch, multi-agent workflows, chatbots, RAG, IBM watsonx.\par
-\textbf{Computer vision:} Deep learning, CNNs, Transformers, semantic segmentation, model evaluation, ensemble inference and reproducible research.\par
-\textbf{Data:} SQL, data preparation, quality control, patient-level splits and provenance.\par
+\textbf{Applied AI and LLM Engineering:} Python, AI agents, multi-agent systems, large language models (LLMs), RAG, Natural Language Processing (NLP), prompt engineering, LLM evaluation, semantic search, text embeddings.\par
+\textbf{Machine learning and Data Science:} PyTorch, deep learning, computer vision, statistical analysis, experiment design, confidence intervals, data quality and topic modeling.\par
+\textbf{Information retrieval:} Evidence retrieval, vector search, semantic similarity and retrieval-augmented generation.\par
 \fi
-\textbf{Software delivery:} FastAPI, REST APIs, AWS Lambda, AWS SES, Git, Azure DevOps CI/CD.\par
+\textbf{Software engineering:} FastAPI, REST APIs, automated testing, observability, AWS Lambda, AWS SES, Git, Azure DevOps CI/CD.\par
 
 \ifdatascience
   \researchwork
@@ -95,23 +126,21 @@ AI and software engineer with a completed MSc in Artificial Intelligence from UN
   \currentwork
   \researchwork
 \fi
-\teachingwork
-
 \newpage
+\selectedprojects
+\teachingwork
 \section{Selected Earlier Experience}
 \smallrole{Software Developer}{PAteam (freelance)}{Jan 2024 -- May 2024}
-Developed Python automation and data-ingestion workflows, including AWS Lambda-hosted extraction, REST API integration and AWS SES messaging.\par
+Built Python data-ingestion automation using AWS Lambda, REST APIs and AWS SES.\par
 \vspace{4pt}
 \smallrole{Software Developer}{Expleo Group (contract)}{May 2022 -- Aug 2023}
 \begin{itemize}
-  \item Built automation and API integrations for a legacy-to-Salesforce data migration using Python, Robocorp, Salesforce REST APIs and SQL Server.
-  \item Clarified requirements with client and delivery teams; documented workflows and supported deployment through Azure DevOps CI/CD, migration monitoring and issue resolution.
+  \item Built Python/Robocorp automation and API integrations for a legacy-to-Salesforce migration using Salesforce REST APIs and SQL Server; documented workflows and supported Azure DevOps CI/CD, monitoring and issue resolution.
 \end{itemize}
 \vspace{2pt}
 \smallrole{Senior RPA Developer}{Nestl\'e}{Feb 2022 -- Aug 2023}
 \begin{itemize}
-  \item Designed and implemented 13 enterprise automations using Python, Blue Prism, PowerShell, SQL and Automation Anywhere; worked with stakeholders in and outside Brazil.
-  \item Supported and reviewed code across more than 10 projects, mentored developers, and managed change requests for release and approval of more than 50 robots.
+  \item Delivered 13 enterprise automations using Python, Blue Prism, PowerShell, SQL and Automation Anywhere; reviewed code across 10+ projects, mentored developers and supported change approval for more than 50 robots.
 \end{itemize}
 \vspace{2pt}
 \smallrole{Senior RPA Developer}{Deloitte}{Nov 2021 -- Feb 2022}
@@ -121,8 +150,8 @@ Translated stakeholder requirements into Python, Node.js and UiPath automation f
 {\small RPA Developer: Oct 2019 -- Nov 2021\quad\textbar\quad Software Developer: Oct 2018 -- Oct 2019}\par
 {\small IT Analyst: Jan 2017 -- Oct 2018\quad\textbar\quad Support Specialist: Jan 2012 -- Oct 2014}\par
 \begin{itemize}
-  \item Delivered global and regional automations with Python/Selenium, APIs, SAP, Db2, Cloudant and Blue Prism; built ad hoc tools with Python, VBA and JavaScript.
-  \item As IT Analyst, created invoice analytics with VBA and Power Query, consolidating more than 20,000 records into over 10 validation KPIs; reported processing time fell from over three hours to about six minutes.
+  \item Delivered automations and integrations with Python/Selenium, APIs, SAP, Db2, Cloudant, Blue Prism, VBA and JavaScript.
+  \item Created invoice analytics with VBA and Power Query for 20,000+ records and 10+ validation KPIs; reported processing time fell from more than three hours to about six minutes.
   \item As Support Specialist, provided English-language support to US and Canadian clients and used SQL for compliance checks and billing-adjustment reporting.
 \end{itemize}
 
@@ -139,7 +168,5 @@ Completed September 2026; research in deep learning for prostate histopathology.
 \href{https://www.credly.com/badges/49d75390-52d0-4dc5-a5bb-a3f803ab0c86/linked_in_profile}{AWS Certified Solutions Architect -- Associate}\hfill {\small Apr 2025}\par
 
 \section{Languages}
-\textbf{Portuguese:} Native.\quad\textbf{English:} Full professional proficiency.\par
-TOEIC Listening and Reading: 890 (September 2025).\par
-\textbf{Spanish and Italian:} Elementary proficiency.\par
+\textbf{Portuguese:} Native.\quad\textbf{English:} Full professional proficiency; TOEIC 890 (Sep 2025).\par
 \end{document}
