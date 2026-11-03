@@ -1,28 +1,41 @@
-# Bruno Henrique Nunes — English CVs
+# Bruno Henrique Nunes — CVs
 
 Applied AI and Machine Learning Engineer based in Brazil, with a completed MSc in Artificial Intelligence from UNICAMP. Interested in remote roles that can hire from Brazil.
 
-Updated **2 November 2026**.
+Updated **3 November 2026**.
 
-| CV | Download | Focus |
+## Current V2 editions
+
+| Language | Download | Focus |
 | --- | --- | --- |
-| Applied AI / Machine Learning Engineer | [English PDF](Bruno_Henrique_Nunes_Applied_AI_ML_Engineer_EN.pdf) | AI agents, multi-agent systems, LLMs, RAG, NLP, prompt engineering, evaluation, semantic search, Python APIs, automated testing and observability |
-| Data Scientist | [English PDF](Bruno_Henrique_Nunes_Data_Scientist_EN.pdf) | Data Science, statistical analysis, experiment design, data quality, Apache Spark, NLP, topic modeling, semantic search and reproducible machine learning |
+| English | [English V2 PDF](v2/bruno_henrique_nunes_v2.pdf) | Applied AI, machine learning, computer vision and Data Science |
+| Português | [Currículo V2 em português](v2/bruno_henrique_nunes_PT_v2.pdf) | IA aplicada, machine learning, visão computacional e ciência de dados |
 
-Both versions use the same career facts, while the summary, skills order and project emphasis are tailored to each role. The selected 2026 professional projects are described at a general, method-focused level; internal system names, data identifiers, source code and unsupported performance claims are excluded.
+Both editions present the same career history in their respective languages. Applied AI and Machine Learning are the primary focus, with Data Science supported by research and professional experience.
 
 [GitHub portfolio](https://github.com/bhnunes) · [Selected AI and machine learning work](https://github.com/bhnunes/bhnunes/tree/main/case-studies) · [Pathology ML pipeline](https://github.com/bhnunes/Master_Coding) · [Research artifacts](https://doi.org/10.25824/redu/EDPCF2) · [LinkedIn](https://www.linkedin.com/in/brunohenriquenunes/) · [Email](mailto:bruno.nunes.1987@gmail.com)
 
-## Editable sources
+## Editable V2 sources
 
-The [LaTeX sources](source/) share one content file to keep the versions consistent. With pdfLaTeX installed, run from source/:
+- [English LaTeX source](source/v2/bruno_henrique_nunes_v2.tex)
+- [Portuguese LaTeX source](source/v2/bruno_henrique_nunes_PT_v2.tex)
+
+From `source/v2/`, compile the PDFs into `v2/` with pdfLaTeX:
 
 ~~~sh
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.. Bruno_Henrique_Nunes_Applied_AI_ML_Engineer_EN.tex
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory=.. Bruno_Henrique_Nunes_Data_Scientist_EN.tex
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=../../v2 bruno_henrique_nunes_v2.tex
+pdflatex -interaction=nonstopmode -halt-on-error -output-directory=../../v2 bruno_henrique_nunes_PT_v2.tex
 ~~~
 
-The CVs use a single-column layout, selectable text and standard section names. The public editions include email and professional profile links.
+Both V2 PDFs are two-page A4 documents with selectable text and a single-column layout.
+
+## Role-targeted English editions
+
+The role-focused editions published on 2 November remain available for applications where a separate emphasis is useful:
+
+- [Applied AI / Machine Learning Engineer PDF](Bruno_Henrique_Nunes_Applied_AI_ML_Engineer_EN.pdf)
+- [Data Scientist PDF](Bruno_Henrique_Nunes_Data_Scientist_EN.pdf)
+- [Shared LaTeX source](source/resume-common.tex)
 
 ## Earlier versions
 

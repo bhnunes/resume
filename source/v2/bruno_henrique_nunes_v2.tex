@@ -1,0 +1,123 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,left=17mm,right=17mm,top=15mm,bottom=15mm]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks,unicode]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\hypersetup{
+  pdfauthor={Bruno Henrique Nunes},
+  pdftitle={Bruno Henrique Nunes - Applied AI and Machine Learning Resume},
+  pdfsubject={Applied AI, machine learning, computer vision and data science}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{2em}
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setcounter{secnumdepth}{0}
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=1.5pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\newcommand{\role}[3]{\textbf{#1 --- #2}\hfill {\small #3}\par}
+
+\begin{document}
+\fontsize{10}{12.2}\selectfont
+
+{\Large\bfseries Bruno Henrique Nunes}\par
+{\large\bfseries Applied AI / Machine Learning Engineer | Data Science}\par
+Brazil | Open to remote opportunities hiring from Brazil\par
+\href{mailto:bruno.nunes.1987@gmail.com}{bruno.nunes.1987@gmail.com}
+\quad\textbar\quad \href{https://github.com/bhnunes}{github.com/bhnunes}
+\quad\textbar\quad \href{https://www.linkedin.com/in/brunohenriquenunes/}{linkedin.com/in/brunohenriquenunes}\par
+
+\section{Professional Summary}
+Applied AI and Machine Learning Engineer with a completed MSc in Artificial Intelligence from the University of Campinas (UNICAMP). Develop AI agents, multi-agent workflows and LLM applications using RAG, NLP and prompt engineering. Combine Python and API engineering, LLM evaluation, automated testing and observability with reproducible deep-learning research and statistical analysis.
+
+\section{Technical Skills}
+\textbf{Applied AI and LLM engineering:} Python, AI agents, multi-agent systems, large language models (LLMs), retrieval-augmented generation (RAG), Natural Language Processing (NLP), prompt engineering, LLM evaluation, semantic search, text embeddings.\par
+\textbf{Machine learning and Data Science:} PyTorch, deep learning, computer vision, statistical analysis, experiment design, confidence intervals, data quality, topic modeling, Apache Spark.\par
+\textbf{Software engineering:} FastAPI, REST APIs, automated testing, observability, AWS Lambda, AWS Simple Email Service (SES), Git, Azure DevOps CI/CD.
+
+\section{Professional Experience}
+\role{Application Developer}{IBM}{Aug 2026 -- Present}
+\begin{itemize}
+  \item Build Python-based AI agents and multi-agent workflows for applied AI, software engineering and Data Science use cases.
+  \item Develop retrieval-grounded LLM applications with RAG, NLP, evidence retrieval, prompt engineering and Python/FastAPI REST APIs.
+  \item Implement prompt-injection defenses, output guardrails, automated testing and observability; support application deployment.
+\end{itemize}
+
+\role{Teaching Assistant}{UNICAMP}{Jul 2024 -- Dec 2025}
+Supported more than 200 undergraduate students in database management and object-oriented programming; led problem-solving sessions in SQL, relational algebra and OOP and supported assessment. Internship appointment.
+
+\role{Software Developer}{PAteam (freelance)}{Jan 2024 -- May 2024}
+Built Python data-ingestion automation using AWS Lambda, REST APIs and AWS SES.\par
+\vspace{2pt}
+\role{Software Developer}{Expleo Group (contract)}{May 2022 -- Aug 2023}
+\begin{itemize}
+  \item Built Python/Robocorp automation and API integrations for a legacy-to-Salesforce migration using Salesforce REST APIs and SQL Server; documented workflows and supported Azure DevOps CI/CD, monitoring and issue resolution.
+\end{itemize}
+\vspace{1pt}
+\role{Senior RPA Developer}{Nestl\'e}{Feb 2022 -- Aug 2023}
+\begin{itemize}
+  \item Delivered 13 enterprise automations using Python, Blue Prism, PowerShell, SQL and Automation Anywhere; reviewed code across 10+ projects, mentored developers and supported change approval for more than 50 robots.
+\end{itemize}
+\vspace{1pt}
+\role{Senior RPA Developer}{Deloitte}{Nov 2021 -- Feb 2022}
+Translated stakeholder requirements into Python, Node.js and UiPath automation for a healthcare IoT integration project; presented solutions to clients and suppliers.\par
+\vspace{2pt}
+\textbf{IBM --- Earlier roles}\par
+RPA Developer (Oct 2019 -- Nov 2021); Software Developer (Oct 2018 -- Oct 2019); IT Analyst (Jan 2017 -- Oct 2018); Support Specialist (Jan 2012 -- Oct 2014).\par
+\begin{itemize}
+  \item Delivered automations and integrations with Python/Selenium, APIs, SAP, Db2, Cloudant, Blue Prism, VBA and JavaScript.
+  \item Created invoice analytics with VBA and Power Query for 20,000+ records and 10+ validation KPIs; reported processing time fell from more than three hours to about six minutes.
+  \item Used SQL for compliance checks and billing-adjustment reporting; provided English-language support to clients in the United States and Canada.
+\end{itemize}
+
+\newpage
+\section{Selected Research and Projects}
+\textbf{Deep Learning for Prostate Histopathology}\hfill {\small Feb 2024 -- Sep 2026}\par
+Master's research, University of Campinas (UNICAMP)\par
+\begin{itemize}
+  \item Developed a research pipeline for binary segmentation of prostate cancer in histopathological images, using CNN/Transformer-based modeling and PyTorch.
+  \item Implemented data preparation and quality control, patient-level data partitioning, model training, ensemble optimization and final evaluation.
+  \item Preserved configurations, data provenance and experimental outputs to support reproducibility. The REDU deposit contains generated research artifacts; original DIAGSET images are not redistributed.
+\end{itemize}
+{\small \href{https://github.com/bhnunes/Master_Coding}{Code: github.com/bhnunes/Master\_Coding}\quad\textbar\quad
+\href{https://doi.org/10.25824/redu/EDPCF2}{Artifacts: doi.org/10.25824/redu/EDPCF2}}\par
+\vspace{2pt}
+\textbf{GEODITE --- Equivariant Interatomic Potentials}\par
+Contributed to model implementation, training and evaluation for an equivariant message-passing model for interatomic potentials. Co-author of \emph{Equivariant Interatomic Potentials without Tensor Products} (arXiv preprint, January 2026).\par
+{\small \href{https://arxiv.org/abs/2601.15492}{arxiv.org/abs/2601.15492}}\par
+
+\section{Selected 2026 Applied AI and Data Science Projects}
+\begin{itemize}
+  \item \textbf{LLM response quality:} Combined lexical metrics, semantic similarity, NLP and text embeddings with model-assisted judgment for ambiguous cases.
+  \item \textbf{AI agent engineering and evaluation:} Built Python tooling for multi-agent software-engineering workflows with repository-aware guidance and automated tests; designed paired statistical analyses using the Wilcoxon signed-rank test, bootstrap confidence intervals and token-use measures.
+  \item \textbf{Applied Data Science and NLP:} Prototyped RAG-supported analysis, multilingual text classification and semantic search; applied data validation, topic modeling, statistical metric design, Apache Spark and telemetry enrichment with REST APIs, PostgreSQL and Kubernetes.
+\end{itemize}
+
+\section{Education}
+\textbf{MSc in Artificial Intelligence --- University of Campinas (UNICAMP)}\hfill {\small 2024 -- 2026}\par
+Completed September 2026; research in deep learning for prostate histopathology.\par
+\textbf{MBA in Computer Software Engineering --- FIA Business School}\hfill {\small 2022 -- 2023}\par
+\textbf{Bachelor's in Engineering Physics / Applied Physics --- University of S\~ao Paulo}\hfill {\small 2006 -- 2010}\par
+
+\section{Selected Certifications}
+AWS Certified Generative AI Developer -- Professional (Oct 2026)\par
+AWS Certified Machine Learning Engineer -- Associate (Jul 2026)\par
+AWS Certified Developer -- Associate (Oct 2025)\par
+AWS Certified Solutions Architect -- Associate (Apr 2025)
+
+\section{Languages}
+\textbf{Portuguese:} Native.\quad\textbf{English:} Full professional proficiency; TOEIC Listening and Reading: 890 (Sep 2025).\par
+\textbf{Spanish and Italian:} Elementary.
+
+\end{document}
