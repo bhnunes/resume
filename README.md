@@ -2,7 +2,7 @@
 
 Applied AI and Machine Learning Engineer based in Brazil, with a completed MSc in Artificial Intelligence from UNICAMP. Interested in remote roles that can hire from Brazil.
 
-Updated **3 November 2026**.
+Updated **4 November 2026**.
 
 ## Current V2 editions
 
