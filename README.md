@@ -1,8 +1,8 @@
 # Bruno Henrique Nunes — CVs
 
-Applied AI and Machine Learning Engineer based in Brazil, with a completed MSc in Artificial Intelligence from UNICAMP. Interested in remote roles that can hire from Brazil.
+Applied AI and Machine Learning Engineer based in Brazil, with a completed master's degree in Technology, Information and Communication Systems from UNICAMP. Research focused on artificial intelligence and deep learning for prostate histopathology. Interested in remote roles that can hire from Brazil.
 
-Updated **4 November 2026**.
+Updated **16 November 2026**.
 
 ## Current V2 editions
 
